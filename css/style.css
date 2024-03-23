@@ -15,7 +15,45 @@
 body{
   background-color: rgb(240, 240, 240);
 }
+@keyframes progrs{
+  0%{
+    width: 0vw;
+  }
+  40%{
+    width: 60vw;
+  }
+  50%{
+    width: 62vw;
+  }
+  70%{
+    width: 68vw;
+  }
+  80%{
+    width: 68vw;
+  }
+  
+  85%{
+    width: 69vw;
+  }
+  
+  93%{
+    width: 90vw;
+  }
+  100%{
+    width: 100vw;
+  }
 
+}
+
+
+
+.progress{
+background-color: red;
+height: 2px;
+/* width: 100vw; */
+animation: progrs 1s linear 1;
+
+}
 header {
   background-color: rgb(255, 255, 255);
   color: black;
@@ -66,7 +104,7 @@ button {
   width: 0px;
   position: absolute;
   top: 0px;
-  left: 392px;
+  left: 420px;
   z-index: 1;
   transition: transform 0.2s;
 }
@@ -106,6 +144,7 @@ header nav ul li input {
   padding: 0 12px;
   position: relative;
   right: 103px;
+  transform: scale(1.15);
 }
 
 header nav ul li img {
@@ -301,6 +340,9 @@ header nav ul li img {
   width: 618px;
   height: 565px;
 
+}
+.card1:hover{
+  box-shadow: 0 8px 12px 2px rgba(0, 0, 0,0.2);
 }
 .card1 h2{
   font-family: "Georama", sans-serif;
