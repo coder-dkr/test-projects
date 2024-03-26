@@ -62,9 +62,10 @@ header {
   top: 0px;
   /* padding: 0 1px; */
   z-index: 2;
+  box-shadow: 0 4px 10px 1px rgba(71, 70, 70, 0.2);
 }
 
-.ster {
+.ster { 
   display: flex;
   align-items: center;
 
