@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Divine Clock</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="Divinecl.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <video muted loop autoplay class="myvid">
+    <source src="videospace.mp4" type="video/mp4">
+  </video>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand sized" href="divclock.html">Divine Clock</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Time-Zone
+            </a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link ">Disabled</a>
+          </li> -->
+        </ul>
+        <form class="d-flex" role="search">
+        <div class="spaces"> 
+          <input class="form-control me-2" type="search" placeholder="Search your time zone" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+      </div>
+       </div> 
+  </nav>
+
+  <div class = "container  my-5">
+    <div class="jumbotron">
+      <h2 class="display-p"><i>Divine Time  -</i><span id="time"></span></h2>
+      <p class="lead">This is a Digital Clock Carrying the Scientific legacy, imbuded with the power of Great Divine Overseer of TIME! </p>
+      <hr class="my-4">
+      <p>&copy; Mindset separates Mortals from Divine.. &copy;
+      </p>
+      <p class="lead">
+        <a href="#"><button class="btn btn-primary btn-lg desires" onclick="myask()">Click for Revelation</button></a>
+      </p>
+    </div>
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+html {
+    height: 100%;
+    width: 100%;
+  }
+
+/* html body{
+background-image: url('https://t3.ftcdn.net/jpg/04/39/30/38/360_F_439303870_3whr2Av27P8dqHmMD0cLxeM2Lj1M0qut.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+
+} */
+
+
+
+video.myvid{
+min-width: 100vw;
+min-height: 100vh;
+object-fit: cover;
+position: fixed;
+right: 0;
+bottom: 0;
+top: 0;
+left: 0;
+z-index: -1;
+}
+nav{
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+button.btn{
+    margin: 0 21px;
+
+}
+input.form-control{
+    background-color: rgba(173, 174, 175, 0.286);
+    color: yellow;
+    border: none;
+
+
+}
+a.sized{
+  transform: scale(1.2);
+}
+ul{
+  position: relative;
+  left: 20px;
+}
+.display-p{
+  font-size: 3.5rem; 
+     font-weight: 300; 
+     line-height: 1.2; 
+}
+
+hr{
+    background-color: white;
+}
+
+
+  div.jumbotron{
+    width: 55vw;
+    margin: auto;
+    background-color: transparent;
+    backdrop-filter: blur(1.2px);
+    color: whitesmoke;
+    transition: transform 0.3s;
+    border-radius:500px;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    top: 50px;
+  }
+  div.jumbotron:hover{
+    /* box-shadow: 0px 0px 40px rgb(255, 255, 255); */
+    transform: scale(1.1);
+  }
+  div .spaces{
+    display: flex;
+    position: relative;
+    left:745px;
+  }
+  button.desires{
+    margin: 1px 0px;
+    background-color: rgb(235, 197, 102);
+    color:black;
+    font-weight: 700;
+  }
+
+  button.desires:hover{
+    border: 2px solid white;
+    background-color: gold;
+  }
+  
+
+  @media screen and (max-width:400px) {
+    *{font-size:1rem ;
+    }
+      h2.display-p{
+      transform: scale(1.2);
+      line-height: 1.4;
+      font-size: 1rem; 
+      font-weight: 400; 
+      padding-bottom: 15px;
+      }
+  
+  
+  }
