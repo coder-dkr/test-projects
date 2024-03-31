@@ -8,10 +8,13 @@
     <link rel="shortcut icon" href="imgs/cartlogo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css"
+        integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-    <div class="progress"></div>
+    <div class="progress" id="prog"></div>
     <header>
         <nav>
             <div class="ster">
@@ -21,7 +24,7 @@
             <ul>
                 <div class="spacing">
                     <li><input type="text" name="searchs" id="serch" placeholder="Search for Products, Brands and More"
-                            width="233px"><button><img src="searchicon.svg" alt="" width="24"></button></li>
+                            width="233px"><button class="coollen"><img src="searchicon.svg" alt="" width="24"></button></li>
                     <li class="dance"><img
                             src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"
                             alt="">Login</li>
@@ -32,15 +35,19 @@
                             src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/Store-9eeae2.svg"
                             alt="">Become a seller</li>
                 </div>
-            
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn"><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg" alt="" class="dots"></a>
-                <div class="dropdown-content">
-                  <a href="https://advertising.flipkart.com/login?returl=/?otracker=ch_vn_advertise_header" target="_blank">Advertise</a>
-                  <a href="https://www.flipkart.com/helpcentre" target="_blank">Customer Care</a>
-                  <a href="https://play.google.com/store/apps/details?id=com.flipkart.android&hl=en&gl=US" target="_blank">Download App</a>
-                </div>
-              </li>
+
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn"><img
+                            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_3verticalDots-ea7819.svg"
+                            alt="" class="dots"></a>
+                    <div class="dropdown-content">
+                        <a href="https://advertising.flipkart.com/login?returl=/?otracker=ch_vn_advertise_header"
+                            target="_blank">Advertise</a>
+                        <a href="https://www.flipkart.com/helpcentre" target="_blank">Customer Care</a>
+                        <a href="https://play.google.com/store/apps/details?id=com.flipkart.android&hl=en&gl=US"
+                            target="_blank">Download App</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -77,16 +84,27 @@
                             width="64px" height="64px">Two Wheelers</div>
                 </div>
             </div>
-            <div class="slider slider-aligns">
-                <img src="imgs/grabss.webp" alt="">
-                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/d3a2f1f5dfa35719.png?q=20" alt="error" width="1504" height="249">
-                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/eece67423a855689.jpg?q=20" alt="">
-                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/68959fd7d83448b8.png?q=20" alt="">
-                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/26a151c733bd1852.png?q=20" alt="">
-                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/59b4f0a4692fc280.png?q=20" alt="">
-                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/60b019a3f4125e28.png?q=20" alt="">
-                <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/c54402522d1f0229.png?q=20" alt="">
-               
+            <div class="box-for-slider">
+                <div class="befores clickable"><button id="bef"><img src="imgs/chevron-left-solid.svg" alt=""></button></div>
+                <div class="slider slider-aligns">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/9a7a08792fde010f.jpg?q=20" alt="">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/728bbf5f9ae2d2b6.png?q=20" alt="">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/624e4aafb54b3d5b.jpg?q=20" alt="">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/9a7a08792fde010f.jpg?q=20" alt="">
+                    <img src="imgs/grabss.webp" alt="">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/d3a2f1f5dfa35719.png?q=20"
+                        alt="error" width="1504" height="249">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/cc633426b89ad841.png?q=20" alt="">    
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/eece67423a855689.jpg?q=20" alt="">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/68959fd7d83448b8.png?q=20" alt="">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/26a151c733bd1852.png?q=20" alt="">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/59b4f0a4692fc280.png?q=20" alt="">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/60b019a3f4125e28.png?q=20" alt="">
+                    <img src="https://rukminim2.flixcart.com/fk-p-flap/1600/270/image/c54402522d1f0229.png?q=20" alt="">
+
+                </div>
+                <div class="forwards clickable">
+                    <button id="forw"><img src="imgs/chevron-right-solid.svg" alt=""></button></div>
             </div>
             <!-- <div class="cards"> -->
 
@@ -402,17 +420,22 @@
                             <p class="text-center my-2">Grab Now!</p>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
     </main>
     <footer>
-       <img src="imgs/Screenshot (13).png" alt="" width="1535"> 
+        <img src="imgs/Screenshot (13).png" alt="" width="1535">
     </footer>
-    <!-- <script>
-        alert("click me nigga");
-    </script> -->
+    <script>
+
+        setTimeout(() => {
+            document.getElementById('prog').classList.remove("progress")
+            // document.getElementsByTagName('div')[0].classList.remove("progress")
+        }, 1200);
+
+    </script>
 </body>
 
 </html>

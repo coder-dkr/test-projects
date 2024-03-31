@@ -10,6 +10,7 @@
 * {
   margin: 0;
   padding: 0;
+
 }
 
 body{
@@ -19,42 +20,25 @@ body{
   0%{
     width: 0vw;
   }
-  40%{
-    width: 60vw;
-  }
-  50%{
-    width: 62vw;
-  }
   70%{
     width: 68vw;
   }
-  80%{
-    width: 68vw;
-  }
-  
   85%{
     width: 69vw;
-  }
-  
-  93%{
-    width: 90vw;
   }
   100%{
     width: 100vw;
   }
 
 }
-
-
-
 .progress{
 background-color: red;
 height: 2px;
-/* width: 100vw; */
 animation: progrs 1s linear 1;
 
 }
 header {
+  
   background-color: rgb(255, 255, 255);
   color: black;
   position: sticky;
@@ -62,7 +46,7 @@ header {
   top: 0px;
   /* padding: 0 1px; */
   z-index: 2;
-  box-shadow: 0 4px 10px 1px rgba(71, 70, 70, 0.2);
+  
 }
 
 .ster { 
@@ -94,10 +78,11 @@ nav ul {
 
 nav ul li input {
   position: relative;
+  border: none;
 }
 
-
-button {
+/* 
+button .coollen {
   background-color:aliceblue;
   border: 1px solid rgb(221, 240, 251);
   border-radius: 8px;
@@ -108,9 +93,18 @@ button {
   left: 420px;
   z-index: 1;
   transition: transform 0.2s;
+  border: none;
+} */
+button.coollen{
+  background-color: aliceblue;
+  border: none;
+  position: absolute;
+  top: 2px;
+  right: 80px;
+
 }
 
-button:hover {
+button.coollen:hover {
    transform: scale(1.13);
   cursor: wait;
   background-color: aliceblue;
@@ -230,6 +224,11 @@ header nav ul li img {
 }
 
 
+.box-for-slider{
+  display: flex;
+  align-items:center;
+  width: 100vw;
+}
 
 .slider{
   width: 98vw;
@@ -245,9 +244,64 @@ header nav ul li img {
   box-shadow: 0 8px 12px 2px rgba(0, 0, 0,0.2);
 } */
 
+div .clickable {
+  background-color: whitesmoke;
+  height: 88px;
+  width: 40px;
+  border: none; 
+  box-shadow: 0px 0px 5px 0px rgb(169, 169, 169);
+} 
+ 
+.forwards{
+  /* display:flex; */
+ 
+  /* display:flex;  */
+  position:absolute;
+  right: 15.2px; 
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; 
+}
+#forw{
+  height: 88px;
+  width: 30px;
+  margin: 0 5px;
+  border: none;
+  background-color: whitesmoke;
+}
+#bef{
+  height: 88px;
+  width: 30px;
+  margin: 0 5px;
+  background-color: whitesmoke;
+  border: none;
+  
+}
+.clickable img{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 35px;
+  right: 11px;
+
+}
+.clickable img:hover{
+  transform: scale(1.1);
+  cursor: not-allowed;
+  opacity: (0.7);
+}
+
+
+.befores{
+  position: absolute;  
+  left: 15.2px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  
+}
+
 
 .card{
-  /* display: flex; */
+
   background-color: rgb(255, 255, 255);
   border: 2px solid white;
   border-radius: 26px;
