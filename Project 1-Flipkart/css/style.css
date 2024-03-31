@@ -33,7 +33,7 @@ body{
 }
 .progress{
 background-color: red;
-height: 2px;
+height: 5px;
 animation: progrs 1s linear 1;
 
 }
