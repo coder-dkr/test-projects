@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: linear-gradient(135deg, rgba(233, 223, 151, 0.623), rgb(246, 209, 1));
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+
+}
+
+.weather-box {
+    width: 100%;
+    max-width: 550px;
+    padding: 40px;
+    display: flex;
+    background: linear-gradient(135deg, rgba(185, 125, 238, 0.859), rgb(47, 1, 82));
+    flex-direction: column;
+    color: rgb(245, 236, 113);
+    gap: 20px;
+    align-items: center;
+    width: fit-content;
+    border-radius: 8px;
+    box-shadow: 0px 4px 30px rgb(76, 66, 5);
+
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-box .search {
+    border: 0;
+    outline: 0;
+    padding: 12px 15px;
+    font-size: 15px;
+    border-radius: 15px;
+    width: 300px;
+    letter-spacing: 2px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+}
+
+.searchBtn {
+    border: 0;
+    outline: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.searchBtn:hover {
+    background-color: gray;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 3px 3px rgb(60, 0, 105);
+}
+
+.temper {
+    font-size: 70px;
+    font-family: "Orbitron", sans-serif;
+}
+
+.cityNaam {
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+}
+
+.morecol {
+    margin-top: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    padding: 0 20px;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.inner-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
+    text-shadow: 3px 3px rgb(60, 0, 105);
+    font-family: "Orbitron", sans-serif;
+}
+
+.lower-head {
+    text-shadow: 3px 3px rgb(60, 0, 105);
+    font-size: 20px;
+}
+
+.celsy {
+    font-size: 40px;
+}
+
+#windy {
+    position: relative;
+    bottom: 7px;
+    left: 12px;
+}
+
+#errtext {
+
+    position: relative;
+    left: -100px;
+    display: none;
+}

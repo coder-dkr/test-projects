@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: url("bg.jpeg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    background-size:cover;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.stop-watch{
+    background-image:linear-gradient(#8BC6EC,#9599E2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 20px 25px -5px rgba(23,34,45,0.5), 0 8px 10px -6px rgb(200,200,200);
+    gap: 15px;
+}
+
+.timerplay{
+    font-size: 50px;
+    font-weight: 600;
+    background-color: rgb(8, 8, 8);
+    border-radius: 6px;
+    box-shadow: 0 2px 10px 3px rgba(105, 105, 105, 0.659);
+    padding: 20px;
+    
+}
+
+.buttons{
+    padding: 12px 24px;
+}
+.btn{
+    background:none;
+    border: none;
+    background-color: var(--clr);
+    padding: 12px 24px;
+    margin-inline: 8px;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.btn:active{
+    opacity: 0.6;
+}
+
+.logs{
+    background-color: white;
+    width: 70vw;
+    height: 30vh;
+    margin-top: 30px;
+    font-size: medium;
+    color: black;
+    box-shadow: 0 2px 10px 3px rgba(105, 105, 105, 0.659);
+    padding: 20px;
+    display:none;
+    overflow-y:scroll;
+    position: relative;
+}
+
+.deleteBtn{
+    position: absolute;
+    top:10px;
+    right: 5px;
+    color: white;
+    font-weight: 600;
+}

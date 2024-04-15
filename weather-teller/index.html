@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/weather.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="weather-box">
+
+            <div class="search-box">
+                <input class="search" name="" id="inp-city" placeholder="Enter city name ">
+                <span><button class="searchBtn" id="btnS"><img src="images/search.png" alt=""
+                            width="15px"></button></span>
+            </div>
+            <div id="errtext">Invalid city name</div>
+            <div class="weather-info">
+                <img src="images/clouds.png" alt="" width="80%" class="imgweath">
+                <div class="temper"><span class="temp-value" id="Temp">0</span><sup class="celsy">°C</sup></div>
+                <div class="cityNaam">Dhruv</div>
+            </div>
+            <div class="morecol">
+
+                <div class="col">
+                    <div class="inner-row">
+                        <img src="images/humidity.png" alt="" width="40px">
+                        <span id="Humidity">0 %</span>
+                    </div>
+                    <div class="lower-head">Humidity</div>
+                </div>
+                <div class="col">
+                    <div class="inner-row">
+                        <img src="images/wind.png" alt="" width="40px">
+                        <span id="Wind_speed">0 km/h</span>
+                    </div>
+                    <div class="lower-head" id="windy">Wind Speed</div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
