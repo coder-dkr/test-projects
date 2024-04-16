@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10+Charted&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+html {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  height: 98vh;
+  background-image: url("binary.gif");
+  background-size: contain;  
+  font-family: "Jersey 10 Charted", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  transform: scale(1.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+span {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3px;
+}
+
+label {
+    background-image: linear-gradient(135deg,rgb(34, 82, 34) 20%,rgb(1, 38, 1) 80%);
+  font-family: "Kanit", sans-serif;
+  width: fit-content;
+  font-weight: 400;
+  color: #92f377;
+  font-size: small;
+  padding: 0 2px;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  width: 31vw;
+  padding: 12px 18px;
+  color: red;
+  background-color: #000f00;
+  opacity: 0.8;
+}
+
+input:focus {
+  border: 2px solid #295809;
+}
+
+#myBtn {
+  outline: 0;
+  border: 0;
+  background:0;
+  position: absolute;
+  top: 2.2rem;
+  right: 2vw;
+  color: red;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.hacklines {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  background-color: #040204;
+  width: 33vw;
+  height: 33vh;
+  color: #53f953;
+  opacity: 0.75;
+  /* overflow: scroll; */
+}
+
+.connecting {
+  display: none;
+}
