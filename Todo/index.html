@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">T&star;D&star; LIST</div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>List</li>
+        </ul>
+        <div id="aboutDev">Dhruv</div>
+    </nav>
+    <div class="popbox">
+        <div class="box">
+            <form action="#" class="form-box">
+                <label for="title" class="title-label box-label">Enter Task Title</label>
+                
+                <input type="text" name="title" id="add-title" class="box-input" placeholder="Enter Task title">
+                
+                <label for="task" class="Task-label box-label">Enter Your Task</label>
+                
+                <textarea name="task" id="add-task" cols="10" rows="8" class="box-input">
+                </textarea>
+                <button id="form-button">Create</button>
+            </form>
+            
+            
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="cards">
+            <div class="card">
+                <div class="add in-card">
+                    <button class="all-btn addBtn"><img src="img/Plus.svg" alt="" class="icon"></button>
+                    <span>Add Note</span>
+                </div>
+
+            </div>
+
+            <div class="card new-card">
+                <div class="task">
+                    <span class="title">Title</span>
+                    <hr class="line">
+                    <span class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae ad
+                        provident incidunt quos eligendi porro magni impedit ullam neque!
+                    </span>
+                </div>
+                <span class="date"></span>
+
+            </div>
+
+            <div class="card ">
+                <div class="Del in-card">
+                    <button class="all-btn delBtn"><img src="img/Circle error.svg" alt="" class="icon"></button>
+                    <span>Delete All</span>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
