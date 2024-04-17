@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Todo List</title>
 </head>
 
@@ -18,58 +19,62 @@
         </ul>
         <div id="aboutDev">Dhruv</div>
     </nav>
-    <div class="popbox">
+    <div class="popbox" id="popup">
         <div class="box">
-            <form action="#" class="form-box">
-                <label for="title" class="title-label box-label">Enter Task Title</label>
-                
-                <input type="text" name="title" id="add-title" class="box-input" placeholder="Enter Task title">
-                
-                <label for="task" class="Task-label box-label">Enter Your Task</label>
-                
+            <form action="#" class="form-box" id="form-card">
+                <div class="close-pop">
+                    <label for="title" class="title-label box-label">Enter Task Title</label> <span
+                        id="closepopBtn">&times;</span>
+                </div>
+
+                <input type="text" name="title" id="add-title" class="box-input" placeholder="Keep Your title Short">
+
+                <label for="task" class="Task-label box-label">Description</label>
+
                 <textarea name="task" id="add-task" cols="10" rows="8" class="box-input">
                 </textarea>
-                <button id="form-button">Create</button>
+                <button id="form-button">Add Task</button>
             </form>
-            
-            
+
+
         </div>
     </div>
     <div class="container">
 
         <div class="cards">
-            <div class="card">
+           
+            <li class="card Primary-card">
+                
                 <div class="add in-card">
                     <button class="all-btn addBtn"><img src="img/Plus.svg" alt="" class="icon"></button>
                     <span>Add Note</span>
                 </div>
 
-            </div>
+            </li>
 
-            <div class="card new-card">
-                <div class="task">
-                    <span class="title">Title</span>
+
+            <!-- <li class="card new-card">
+                
+                    <span class="title">Heloo</span>
+                    <span class="note">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem commodi deleniti enim, facere adipisci qui aut ea? Fuga maiores reprehenderit quasi? Nemo commodi cum similique.</span>
                     <hr class="line">
-                    <span class="note">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic repudiandae ad
-                        provident incidunt quos eligendi porro magni impedit ullam neque!
-                    </span>
-                </div>
-                <span class="date"></span>
+                    <span class="date"></span>
 
-            </div>
+            </li> -->
 
-            <div class="card ">
+
+
+            <li class="card ">
                 <div class="Del in-card">
                     <button class="all-btn delBtn"><img src="img/Circle error.svg" alt="" class="icon"></button>
                     <span>Delete All</span>
                 </div>
 
-            </div>
+            </li>
         </div>
 
 
     </div>
-
 
 
 
