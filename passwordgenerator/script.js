@@ -87,3 +87,23 @@ genBtn.addEventListener("click",(figure) => {
 }
 })
 
+let copyBtn = document.querySelector(".copyBtn");
+
+copyBtn.addEventListener("click",() => {
+    document.querySelector(".PassScreen").classList.add("active");
+    
+    let texttocopy = screen.innerHTML;
+     const elm = document.createElement("input")
+     elm.value = texttocopy;
+     document.body.appendChild(elm)
+     elm.select();
+     document.execCommand('copy');
+     document.body.removeChild(elm);
+     
+    setTimeout(() => {
+        document.querySelector(".PassScreen").classList.remove("active")
+        
+    }, 1500);
+ 
+
+})

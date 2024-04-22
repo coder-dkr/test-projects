@@ -100,6 +100,12 @@
    
 
 }
+@media screen and (max-width: 480px) {
+    .password-box {
+        max-width: 85vw;
+    }
+    
+  }
 h1{
     padding: 2px 20px;
     font-family: "Ubuntu", sans-serif;
@@ -135,6 +141,34 @@ h1{
     top: 10%;
     right: 4px;
 }
+.copyBtn:before{
+    content: "Copied";
+    position: absolute;
+    top: -200%;
+    left:-130%;
+    background-color: gold;
+    box-shadow: 0 0px 2px black;
+    padding: 5px 5px;
+    font-family: "Ubuntu", sans-serif;
+    border-radius: 4px;
+    display: none;
+    
+}
+.copyBtn:after{
+    content: "";
+    position: absolute;
+    top:-60%;
+    left: 40%;
+    width:5px;
+    height: 5px;
+    background-color: gold;
+    transform: rotate(45deg);
+    display: none;
+}
+.PassScreen.active .copyBtn:before, .PassScreen.active .copyBtn:after{
+    display: block;
+}
+
 .copyBtn .fa-copy{
     font-size: 15px;
     cursor: pointer;
