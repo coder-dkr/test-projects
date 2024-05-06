@@ -10,7 +10,8 @@
 }
 body{
     min-height: 100vh; 
-    background-image: linear-gradient(130deg,rgb(134, 241, 216) 0%,rgb(27, 249, 242) 100%);
+    /* background-image: linear-gradient(130deg,rgb(134, 241, 216) 0%,rgb(27, 249, 242) 100%); */
+    background-image:linear-gradient(135deg,rgb(22, 22, 22),rgb(23, 2, 72));
     
 }
 /* .overlay{
@@ -26,12 +27,18 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px ;
+    box-shadow: 0 1px 18px rgb(168, 121, 250);
 }
 nav .logo{
+    letter-spacing: 5px;
     max-height: 70px;
     font-size: 30px;
     font-weight: 600;
     color: white;
+    transition: 1s;
+}
+.logo:hover{
+    color: gold;
 }
 nav ul{
     display: flex;
@@ -66,7 +73,9 @@ nav #aboutDev{
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 999;
-    background: rgba(0, 0, 0, 0.437);
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -86,7 +95,8 @@ nav #aboutDev{
     background-color: #fff;
     padding: 20px; 
     border-radius: 8px;
-    box-shadow: 0 10px 15px -3px rgb(0,0,0,0.2), 0 4px 6px -4px rgb(0,0,0,0.7);
+    box-shadow: 0 10px 15px -3px rgb(0,0,0,0.2), 0 4px 6px -4px rgb(0,0,0,1);
+    
 }
 .close-pop{
     display: flex;
@@ -147,7 +157,8 @@ textarea{
 
 
 .container{
-    margin:30px
+    margin:30px;
+    margin-top: 40px;
 }
 .cards{
     display: grid;
@@ -231,7 +242,7 @@ textarea{
     height: 40px;
     /* background-color: blue;  */
     text-wrap: nowrap;
-    overflow-x: scroll;
+    overflow: hidden;
     
 }
 .line{
@@ -249,7 +260,8 @@ textarea{
     height: 150px;
     width: 220px;
     max-width: 221px;
-    overflow-y: scroll;
+    overflow: hidden;
+   
 
 }
 .cardfoot{
