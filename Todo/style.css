@@ -66,7 +66,7 @@ nav #aboutDev{
 }
 .popbox{
     
-    min-height: 108vh;
+    min-height: 110vh;
     min-width: 100vw;
     position: absolute;
     top: 55%;
@@ -74,11 +74,7 @@ nav #aboutDev{
     transform: translate(-50%,-50%);
     z-index: 999;
     background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    backdrop-filter: blur(4px);
     display: none;
 
 }
@@ -240,7 +236,7 @@ textarea{
     font-size: x-large;
     width: 100%;
     height: 40px;
-    /* background-color: blue;  */
+    font-weight: 500;
     text-wrap: nowrap;
     overflow: hidden;
     
@@ -258,8 +254,8 @@ textarea{
     margin-top:10px;
     margin-bottom: 10px;
     height: 150px;
-    width: 220px;
-    max-width: 221px;
+    width: 215px;
+    max-width: 216px;
     overflow: hidden;
    
 

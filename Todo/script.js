@@ -29,37 +29,53 @@ addBtn.addEventListener("click", (e) => {
 
 
 })
+
+
 closePop.addEventListener("click", () => {
     popup.style.display = "none";
 })
-
+let i = 0
 formBtn.addEventListener("click", (e) => {
+
     if (titleInp.value === "" || taskInp.value === "") {
         alert("TASK CANNOT BE EMPTY");
         e.preventDefault()
     }
     else {
         e.preventDefault()
-
-        let title = titleInp.value;
-        let task = taskInp.value;
+        let Data = {
+            title:[],
+            task:[]
+        };
+        Data.title[i] = `${titleInp.value}`;
+        Data.task[i] = `${taskInp.value}`;
+        console.log(Data.title)
+        
+        let dateLog = `${new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`;
+        
+        localStorage.setItem("title",`${Data.title}`);
+        localStorage.setItem("task",`${Data.task}`);
+        localStorage.setItem("createdate",`${dateLog}`);
+        
         popup.style.display = "none"
-        let dateLog = `${new Date().getDate()}/${new Date().getMonth() + 1}/${new Date().getFullYear()}`
-        primaryCard.insertAdjacentHTML('afterend', `
-<li class="card new-card">
-    <span class="title">${title}</span>
-    <span class="note">${task}</span>
-    <hr class="line">
-    <div class="cardfoot">
-        <span class="date">${dateLog}</span>
+        localStorage.setItem("newcards",`
+        <li class="card new-card">
+        <span class="title forEDITtit">${localStorage.getItem("title")}</span>
+        <span class="note forEDITtas">${localStorage.getItem("task")}</span>
+        <hr class="line">
+        <div class="cardfoot">
+        <span class="date">${localStorage.getItem("createdate")}</span>
         <span class="editdel">
-          <span class="edit"><img onclick="editTask(this)" src="img/pen-solid.svg" alt="pen"></span>
-          <span class="delnote"><img onclick="deleteTask(this)" src="img/trash-can-solid.svg" alt="pen">
+        <span class="edit"><img onclick="editTask(this)" src="img/pen-solid.svg" alt="pen"></span>
+        <span class="delnote"><img onclick="deleteTask(this)" src="img/trash-can-solid.svg" alt="pen">
         </span>
         </span>
-    </div>
-
-</li>`);
+        </div>
+        
+        </li>`)
+        primaryCard.insertAdjacentHTML('afterend', localStorage.getItem("newcards") );
+        
+        i++;
 
         let edits = document.querySelectorAll(".edit")
         Array.from(edits).forEach(e => {
@@ -81,14 +97,36 @@ formBtn.addEventListener("click", (e) => {
             })
 
         })
-
-
+        localStorage.setItem("number",i)
+        
     }
-
+    
 })
+for(let j =0; j<localStorage.getItem("number");j++){
+    localStorage.newcards[j] = `
+    <li class="card new-card">
+        <span class="title forEDITtit">${localStorage.getItem("title")[i]}</span>
+        <span class="note forEDITtas">${localStorage.getItem("task")[i]}</span>
+        <hr class="line">
+        <div class="cardfoot">
+            <span class="date">${localStorage.getItem("createdate")}</span>
+            <span class="editdel">
+              <span class="edit"><img onclick="editTask(this)" src="img/pen-solid.svg" alt="pen"></span>
+              <span class="delnote"><img onclick="deleteTask(this)" src="img/trash-can-solid.svg" alt="pen">
+            </span>
+            </span>
+        </div>
+    
+    </li>`
+    primaryCard.insertAdjacentHTML('afterend', localStorage.getItem("newcards") );
+
+}
+
+
 
 delBtn.addEventListener("click", (e) => {
     e.preventDefault()
+    localStorage.clear()
     location.reload()
 
 
@@ -97,36 +135,73 @@ delBtn.addEventListener("click", (e) => {
 
 const deleteTask = (e) => {
     let delconfirm = confirm("Delete this task?")
-    if(delconfirm){
+    if (delconfirm) {
         e.parentElement.parentElement.parentElement.parentElement.remove()
+
     }
-    else{
+    else {
         console.warn("TASK NOT DELETED")
     }
 }
 
-let editTask = (e)=>{
-    popup.style.display = "block"
-    formBtn.style.display = "none"
-    updateFormBtn.style.display="block"
-   let editableTitle = e.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling;
-    let editableTask = e.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling;
-    taskInp.value = editableTask.innerHTML
-    titleInp.value = editableTitle.innerHTML
-  console.log("hei")
-    
-        updateFormBtn.addEventListener("click",(p)=>{
-            p.preventDefault()
-            if(titleInp.value === "" || taskInp.value === ""){
-                alert("TASK CANNNOT BE EMPTY")
-            }
-            else{
-            editableTitle.innerHTML = titleInp.value
-            editableTask.innerHTML = taskInp.value
-            formBtn.style.display = "block"
-            updateFormBtn.style.display="none"
-            popup.style.display = "none"
-            }
-            
-        })           
-}
+// function editTask(e) {
+//     popup.style.display = "block"
+//     formBtn.style.display = "none"
+//     updateFormBtn.style.display = "block"
+//     //    let editableTitle = e.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling;
+//     //     let editableTask = e.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling;
+//     let editableTitle = e.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("forEDITtit")[0];
+//     let editableTask = e.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("forEDITtas")[0];
+
+//     taskInp.value = editableTask.innerHTML
+//     titleInp.value = editableTitle.innerHTML
+//     console.log(editableTitle)
+//     console.log(editableTask)
+
+
+//     console.log("before click")
+//     updateFormBtn.addEventListener("click", (p) => {
+//         p.preventDefault()
+//         if (titleInp.value === "" || taskInp.value === "") {
+//             alert("TASK CANNNOT BE EMPTY")
+//         }
+//         else {
+//             console.log(editableTitle)
+//             console.log(editableTask)
+//             editableTitle.innerHTML = titleInp.value
+//             editableTask.innerHTML = taskInp.value
+//             formBtn.style.display = "block"
+//             updateFormBtn.style.display = "none"
+//             popup.style.display = "none"
+//         }
+
+//     })
+// }
+
+
+//alt method yet to try
+
+
+
+// const storedTitles = localStorage.getItem("title");
+// const storedTasks = localStorage.getItem("task");
+
+// const titlesArray = storedTitles.split(",");
+// const tasksArray = storedTasks.split(",");
+
+
+// const primaryCard = document.querySelector(".Primary-card");
+
+
+// for (let i = 0; i < titlesArray.length; i++) {
+//     const newCard = document.createElement("li");
+//     newCard.classList.add("card", "new-card");
+//     newCard.innerHTML = `
+//         <span class="title">${titlesArray[i]}</span>
+//         <span class="note">${tasksArray[i]}</span>
+//         <!-- Other card elements (date, edit/delete buttons, etc.) -->
+//     `;
+//     primaryCard.appendChild(newCard);
+// }
+
+
