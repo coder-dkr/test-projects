@@ -3,6 +3,7 @@ let addBtn = document.querySelector(".addBtn")
 let delBtn = document.querySelector(".delBtn")
 let closePop = document.getElementById("closepopBtn")
 const todoKey = "todoData";
+
 // adding task to grid
 let taskTitle = document.querySelector(".title")
 let taskNote = document.querySelector(".note")
@@ -73,6 +74,7 @@ formBtn.addEventListener("click", (e) => {
         </div>
         
         </li>` );
+ 
 
         i++;
 
@@ -104,7 +106,7 @@ formBtn.addEventListener("click", (e) => {
 let todoDataList = JSON.parse(localStorage.getItem(todoKey))
 if (todoDataList !== null) {
 
-    todoDataList.forEach((elem,id) => {
+    todoDataList.forEach((elem, id) => {
         primaryCard.insertAdjacentHTML('afterend', `
         <li class="card new-card">
         <span class="title forEDITtit">${elem.title}</span>
@@ -122,8 +124,29 @@ if (todoDataList !== null) {
         </li>` );
 
     })
-}   
+}
+// for mouseover texxt
+let edits = document.querySelectorAll(".edit")
+Array.from(edits).forEach(e => {
+    e.addEventListener("mouseover", () => {
+        e.parentElement.parentElement.classList.add("activeedit")
+    })
+    e.addEventListener("mouseout", () => {
+        e.parentElement.parentElement.classList.remove("activeedit")
+    })
 
+})
+let delnotes = document.querySelectorAll(".delnote")
+Array.from(delnotes).forEach(e => {
+    e.addEventListener("mouseover", () => {
+        e.parentElement.parentElement.classList.add("activedel")
+    })
+    e.addEventListener("mouseout", () => {
+        e.parentElement.parentElement.classList.remove("activedel")
+    })
+
+})
+//&&&&&&&&&&&&&&&&
 
 delBtn.addEventListener("click", (e) => {
     e.preventDefault()
@@ -134,21 +157,21 @@ delBtn.addEventListener("click", (e) => {
 })
 
 
-const deleteTask = (e,dataId) => {
-    
+const deleteTask = (e, dataId) => {
+
     let delconfirm = confirm("Delete this task?")
     if (delconfirm) {
         let tempDataList = JSON.parse(localStorage.getItem(todoKey))
-        if(tempDataList != null){
-            
-            tempDataList.forEach((value,index)=>{
-                      if(dataId == value.id){
-                        tempDataList.splice(index,1)
-                        localStorage.setItem(todoKey,JSON.stringify(tempDataList));
-                        console.log("puchii")
-                      }
-            }) 
-           
+        if (tempDataList != null) {
+
+            tempDataList.forEach((value, index) => {
+                if (dataId == value.id) {
+                    tempDataList.splice(index, 1)
+                    localStorage.setItem(todoKey, JSON.stringify(tempDataList));
+                    console.log("puchii")
+                }
+            })
+
             e.parentElement.parentElement.parentElement.parentElement.remove()
         }
 
@@ -191,7 +214,6 @@ function editTask(e) {
 
     })
 }
-
 
 
 
