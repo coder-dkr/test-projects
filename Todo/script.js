@@ -144,39 +144,40 @@ const deleteTask = (e) => {
     }
 }
 
-// function editTask(e) {
-//     popup.style.display = "block"
-//     formBtn.style.display = "none"
-//     updateFormBtn.style.display = "block"
-//     //    let editableTitle = e.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling;
-//     //     let editableTask = e.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling;
-//     let editableTitle = e.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("forEDITtit")[0];
-//     let editableTask = e.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("forEDITtas")[0];
+function editTask(e) {
+    popup.style.display = "block"
+    formBtn.style.display = "none"
+    updateFormBtn.style.display = "block"
+    //    let editableTitle = e.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling.previousElementSibling;
+    //     let editableTask = e.parentElement.parentElement.parentElement.previousElementSibling.previousElementSibling;
+    let editableTitle = e.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("forEDITtit")[0];
+    let editableTask = e.parentElement.parentElement.parentElement.parentElement.getElementsByClassName("forEDITtas")[0];
 
-//     taskInp.value = editableTask.innerHTML
-//     titleInp.value = editableTitle.innerHTML
-//     console.log(editableTitle)
-//     console.log(editableTask)
+    taskInp.value = editableTask.innerHTML
+    titleInp.value = editableTitle.innerHTML
+    console.log(editableTitle)
+    console.log(editableTask)
 
 
-//     console.log("before click")
-//     updateFormBtn.addEventListener("click", (p) => {
-//         p.preventDefault()
-//         if (titleInp.value === "" || taskInp.value === "") {
-//             alert("TASK CANNNOT BE EMPTY")
-//         }
-//         else {
-//             console.log(editableTitle)
-//             console.log(editableTask)
-//             editableTitle.innerHTML = titleInp.value
-//             editableTask.innerHTML = taskInp.value
-//             formBtn.style.display = "block"
-//             updateFormBtn.style.display = "none"
-//             popup.style.display = "none"
-//         }
+    console.log("before click")
+    updateFormBtn.addEventListener("click", (p) => {
+        p.preventDefault()
+        alert("under contruction")
+        // if (titleInp.value === "" || taskInp.value === "") {
+        //     alert("TASK CANNNOT BE EMPTY")
+        // }
+        // else {
+        //     console.log(editableTitle)
+        //     console.log(editableTask)
+        //     editableTitle.innerHTML = titleInp.value
+        //     editableTask.innerHTML = taskInp.value
+        //     formBtn.style.display = "block"
+        //     updateFormBtn.style.display = "none"
+        //     popup.style.display = "none"
+        // }
 
-//     })
-// }
+    })
+}
 
 
 //alt method yet to try
