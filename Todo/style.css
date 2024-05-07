@@ -176,6 +176,9 @@ textarea{
 }
 .card:hover{
     transform: scale(1.05);
+    background-color: black;
+    color: white;
+    box-shadow: 0 3px 10px rgb(224, 188, 255);
 }
 .card .in-card{
     display: flex;
@@ -234,6 +237,7 @@ textarea{
     text-decoration: none;
     position: relative;    
 }
+
 .title{
     font-size: x-large;
     width: 100%;
@@ -291,12 +295,13 @@ textarea{
     content: 'Edit';
     font-size: 12px;
     padding: 3px 8px;
-    background-color: rgb(5, 34, 60);
+    /* background-color: rgb(5, 34, 60); */
+    background:gold;
     position: absolute;
     border-radius: 10px;
     bottom: 8%;
     right: 21.5%;
-    color: white;
+    color: black;
     display: none;
     
 }
@@ -304,10 +309,12 @@ textarea{
     content: '';
     width: 10px;
     height: 10px;
-    background-color:rgb(5, 34, 60);
+    /* background-color:rgb(5, 34, 60); */
+    background:gold;
     position: absolute;
     bottom: 8%;
-    right: 21.5%;    
+    right: 21.5%; 
+    color: black;  
     border-top-left-radius: 10px;
     display: none;
 }
@@ -323,18 +330,20 @@ textarea{
     position: absolute;
     font-size: 12px;
     padding: 3px 8px;
-    background-color: rgb(5, 34, 60);
+    /* background-color: rgb(5, 34, 60); */
+    background:gold;
     border-radius: 10px;
     bottom: 8%;
     right: 13.5%;
-    color: white;
+    color:black;
     display: none;
 }
 .delnote::after{
     content: '';
     width: 10px;
     height: 10px;
-    background-color:rgb(5, 34, 60);
+    /* background-color:rgb(5, 34, 60); */
+    background:gold;
     position: absolute;
     bottom: 8%;
     right: 13.5%;    
