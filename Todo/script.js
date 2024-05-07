@@ -5,14 +5,14 @@ let closePop = document.getElementById("closepopBtn")
 const todoKey = "todoData";
 // adding task to grid
 let taskTitle = document.querySelector(".title")
-let taskNote = document.querySelector(".note")
+let taskNote = document.querySelectorAll(".note")
 let titleInp = document.getElementById("add-title")
 let taskInp = document.getElementById("add-task")
 let popup = document.getElementById("popup")
 let form = document.getElementById("form-card")
 let formBtn = document.getElementById("form-button")
 let updateFormBtn = document.getElementById("Update-form-button")
-let newTask = document.querySelector(".new-card")
+let newTask = document.querySelectorAll(".new-card")
 let primaryCard = document.querySelector(".Primary-card")
 let cardfoots = document.querySelectorAll(".cardfoot")
 addBtn.addEventListener("click", (e) => {
@@ -192,5 +192,43 @@ delBtn.addEventListener("click", (e) => {
     location.reload()
 })
 
+//reading overflown content
+let isCard = document.querySelectorAll(".card")
+
+document.addEventListener("DOMContentLoaded", () => {
+    const wholeCover = document.querySelector(".wholeCover")
+    const newTaskCard = document.querySelectorAll(".new-card");
+    wholeCover.style.zIndex = "-1"
+    newTaskCard.forEach((e) => {
+        e.addEventListener("click", () => {
+        
+        const noteof = e.querySelector(".note");
+        if (noteof) {
+          const notestr = String(noteof.innerHTML).split(" ");
+          if (notestr.length > 15) {
+            wholeCover.style.zIndex = "99"
+            e.style.zIndex = "100"
+            noteof.style.overflowY = "scroll";
+            console.log(notestr.length);
+          } else {
+            console.log(notestr.length);
+          }
+          wholeCover.addEventListener("click",()=>{
+            noteof.style.overflowY = "hidden";
+            wholeCover.style.zIndex = "-1"
+            e.style.zIndex = "0"
+
+          })
+
+        } 
+        else {
+          console.error("error");
+        }
+      });
+      
 
 
+
+    });
+  });
+  
