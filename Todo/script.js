@@ -19,11 +19,14 @@ addBtn.addEventListener("click", (e) => {
     titleInp.value = ""
     taskInp.value = ""
     e.preventDefault()
+    formBtn.style.display = "block"
+    updateFormBtn.style.display = "none";
     popup.style.display = "block";
 
 })
 closePop.addEventListener("click", () => {
     popup.style.display = "none";
+   
 })
 let i = 0
 formBtn.addEventListener("click", (e) => {
