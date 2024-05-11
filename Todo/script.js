@@ -130,7 +130,7 @@ Array.from(delnotes).forEach(e => {
 })
 //&&&&&&&&&&&&&&&&
 const deleteTask = (e, dataId) => {
-    let delconfirm = confirm("Delete this task?")
+    let delconfirm = confirm("Completed?")
     if (delconfirm) {
         let tempDataList = JSON.parse(localStorage.getItem(todoKey))
         if (tempDataList != null) {
@@ -138,10 +138,19 @@ const deleteTask = (e, dataId) => {
                 if (dataId == value.id) {
                     tempDataList.splice(index, 1,)
                     localStorage.setItem(todoKey, JSON.stringify(tempDataList));
-                    console.log("puchii")
                 }
             })
-            e.parentElement.parentElement.parentElement.parentElement.remove()
+            let TobedEL = e.parentElement.parentElement.parentElement.parentElement
+            e.parentElement.parentElement.parentElement.parentElement.classList.add("gettingDel")
+            e.parentElement.parentElement.parentElement.parentElement.innerHTML = `<img src="img/tickk.gif" alt="">`
+            TobedEL.firstElementChild.style.transform = "scale(0)" 
+            setTimeout(()=>{
+            TobedEL.firstElementChild.style.transform = "scale(1.35)"
+            },300)
+            setTimeout(()=>{
+                TobedEL.remove()
+                location.reload()
+            },3500)
         }
     }
     else {
@@ -225,7 +234,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } 
         else {
-          console.error("error");
+          console.error("hello");
         }
       });
       

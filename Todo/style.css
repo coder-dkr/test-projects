@@ -368,3 +368,23 @@ textarea{
       display: none;
     }
   }
+
+
+
+  .gettingDel{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.896);
+    overflow: hidden;
+    box-shadow: 0 5px 10px #00f1c5;
+  }
+  .gettingDel:hover{
+    box-shadow: 0 5px 15px #00f1c5;
+
+  }
+  .gettingDel img{
+       width: 330px;
+      transition: transform 0.7s;
+  }
