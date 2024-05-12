@@ -149,8 +149,7 @@ const deleteTask = (e, dataId) => {
             },300)
             setTimeout(()=>{
                 TobedEL.remove()
-                location.reload()
-            },3500)
+            },3520)
         }
     }
     else {
