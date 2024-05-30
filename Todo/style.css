@@ -388,3 +388,11 @@ textarea{
        width: 330px;
       transition: transform 0.7s;
   }
+
+  ::selection{
+    color: aqua;
+   
+    background-color: rgb(53, 15, 69);
+
+
+}
