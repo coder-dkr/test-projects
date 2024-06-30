@@ -220,9 +220,9 @@ document.addEventListener("DOMContentLoaded", () => {
             wholeCover.style.zIndex = "99"
             e.style.zIndex = "100"
             noteof.style.overflowY = "scroll";
-            console.log(notestr.length);
+            
           } else {
-            console.log(notestr.length);
+           
           }
           wholeCover.addEventListener("click",()=>{
             noteof.style.overflowY = "hidden";
@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } 
         else {
-          console.error("hello");
+          
         }
       });
       
