@@ -1,5 +1,5 @@
 import Script from 'next/script';
-import '/js/style.css'; // Adjust this path according to your styles structure
+import '@/public/style.css'; // Adjust this path according to your styles structure
 
 export default function Home() {
   return (
